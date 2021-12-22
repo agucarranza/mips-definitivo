@@ -1,0 +1,5 @@
+// prueba3.asm
+// Probar ADDU, SUBU, AND, OR, XOR, SLT, SLL, SRL, SRA, SLLV, SRLV, SRAV
+// SIN RIESGOS.
+
+//TODO
