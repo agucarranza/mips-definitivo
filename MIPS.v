@@ -297,7 +297,7 @@ MuxControl i_MuxControl (
 	.o_Signed      (SignZero               ),
 	.o_Long        (ID_Long                ),
 	.o_MemSign     (ID_MemSign             ),
-	.o_Halt        (ID_Halt                )// TODO Halt
+	.o_Halt        (ID_Halt                )
 );
 
 
