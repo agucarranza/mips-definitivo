@@ -36,9 +36,9 @@ module ALU (
 			SLL  : ALU_register =   i_Data_2 <<  i_Shamt;
 			SRL  : ALU_register =   i_Data_2 >>  i_Shamt;
 			SRA  : ALU_register =   $signed(i_Data_2) >>> $signed(i_Shamt);
-			SLLV : ALU_register =   i_Data_2 <<  i_Data_1[4:0];
-			SRLV : ALU_register =   i_Data_2 >>  i_Data_1[4:0];
-			SRAV : ALU_register =   $signed(i_Data_2) >>> $signed(i_Data_1[4:0]);
+			SLLV : ALU_register =   i_Data_1 <<  i_Data_2[4:0];
+			SRLV : ALU_register =   i_Data_1 >>  i_Data_2[4:0];
+			SRAV : ALU_register =   $signed(i_Data_1) >>> (i_Data_2[4:0]);
 			ADDU : ALU_register =   i_Data_1  +  i_Data_2;
 			SUBU : ALU_register =   i_Data_1  -  i_Data_2;
 			AND  : ALU_register =   i_Data_1  &  i_Data_2;
