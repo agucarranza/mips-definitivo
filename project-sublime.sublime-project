@@ -1,0 +1,19 @@
+{
+	"folders":
+	[
+		{
+			// "path": "D:\\arqcomp\\mips_windows\\mips_windows.srcs\\sources_1\\imports\\new"
+			"path": "Z:\\home\\agustin\\arquitectura\\mips_definitivo\\mips_definitivo.srcs\\sim_1\\imports\\new"
+		}
+	],
+    
+    "sources":
+    [
+        // "D:\\arqcomp\\mips_windows\\mips_windows.srcs\\sources_1\\imports\\new
+        "Z:\\home\\agustin\\arquitectura\\mips_definitivo\\mips_definitivo.srcs\\sim_1\\imports\\new",
+        // "D:\\arqcomp\\mips_windows\\mips_windows.srcs\\sources_1\\ip\\clock_wizard"
+        "Z:\\home\\agustin\\arquitectura\\mips_definitivo\\mips_definitivo.srcs\\sources_1\\ip\\clk_wiz_0",
+
+        "Z:\\home\\agustin\\arquitectura\\mips_definitivo\\mips_definitivo.gen\\sources_1\\ip\\clk_wiz_0"
+    ]
+}
