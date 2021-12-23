@@ -68,7 +68,7 @@ module Data_memory (
 	
     integer i;
 	always @(posedge i_clk) begin
-		$display("Memoria de datos1");
+		$display("Memoria de datos");
 		
 		// foreach (data[i])
 		for (i = 0; i < 32; i = i+1) begin
