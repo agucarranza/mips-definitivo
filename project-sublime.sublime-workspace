@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"sh",
+				"store_half\tMemory[$s + C] = $t"
+			],
+			[
+				"l",
+				"load_halfword_unsigned\t$t = Memory[$s + C] (unsigned)"
+			],
+			[
+				"lb",
+				"load_byte_unsigned\t$t = Memory[$s + C] (unsigned)"
+			],
+			[
 				"sl",
 				"shift_left_logical\t$d = $t << $s"
 			],
@@ -18,10 +30,6 @@
 			[
 				"s",
 				"shift_right_logical_immediate\t$d = $t >> shamt"
-			],
-			[
-				"sh",
-				"shift_left_logical_immediate\t$d = $t << shamt"
 			],
 			[
 				"srl",
@@ -372,11 +380,12 @@
 	"buffers":
 	[
 		{
-			"file": "top.v",
+			"file": "instructions.mem",
 			"settings":
 			{
-				"buffer_size": 1799,
-				"line_ending": "Unix"
+				"buffer_size": 329,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -398,15 +407,6 @@
 			}
 		},
 		{
-			"file": "EX_MEM.v",
-			"settings":
-			{
-				"buffer_size": 2910,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "MIPS.v",
 			"settings":
 			{
@@ -416,130 +416,37 @@
 			}
 		},
 		{
-			"file": "ID_EX.v",
+			"file": "prueba4.mem",
 			"settings":
 			{
-				"buffer_size": 5164,
+				"buffer_size": 297,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "prueba4.asm",
+			"settings":
+			{
+				"buffer_size": 586,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "prueba1.asm",
+			"file": "data_memory.mem",
 			"settings":
 			{
-				"buffer_size": 296,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "//prueba1"
-			}
-		},
-		{
-			"file": "prueba2.asm",
-			"settings":
-			{
-				"buffer_size": 280,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "// prueba2.asm"
-			}
-		},
-		{
-			"file": "prueba2.mem",
-			"settings":
-			{
-				"buffer_size": 198,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "// prueba3.asm\n// Probar ADDU, SUBU, AND, OR, XOR, SLT, SLL, SRL, SRA, SLLV, SRLV, SRAV\n// SIN RIESGOS.\n// Aritmetico:\tduplica valores\n// Logico:\t\trellena con ceros\n\naddu 1 , 13, 14\t\t// 1B(r1 ) = D   +  E\nsubu 2 , 16, 15\t\t//  1(r2 ) = 10  -  F \nand  3 , 17, 18\t\t// 10(r3 ) = 11 AND 12\nor   4 , 19, 20\t\t// 17(r4 ) = 13 OR  14\nxor  5 , 21, 22\t\t//  3(r5 ) = 15 XOR 16\nslt  6 , 23, 24\t\t//  1(r6 ) = 17  <  18\nsll  7 , 25, 2\t\t// 64(r7 ) = 19 <<  2\nsrl  8 , 26, 1\t\t//  D(r8 ) = 1A >>  1 \nsra  9 , 27, 2\t\t//  6(r9 ) = 1B >>  3\t\t(con signo)\nsllv 10, 28, 2 \t\t// 38(r10) = 1C << 1(r2) \t\t\t\t\t\tREVISAR\nsrlv 11, 29, 2 \t\t//  E(r11) = 1D >> 1(r2)\t\t\t\t\t\tREVISAR\nsrav 12, 30, 2 \t\t//  7(r12) = 1E >> 1(r2)\t(con signo)\t\t\tREVISAR",
-			"file": "prueba3.asm",
-			"file_size": 724,
-			"file_write_time": 132846669742171316,
-			"settings":
-			{
-				"buffer_size": 707,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "// prueba3.asm"
-			}
-		},
-		{
-			"file": "ALU.v",
-			"settings":
-			{
-				"buffer_size": 1656,
+				"buffer_size": 287,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "prueba3.mem",
-			"settings":
-			{
-				"buffer_size": 396,
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "Data_memory.v",
 			"settings":
 			{
-				"buffer_size": 1940,
+				"buffer_size": 1939,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Instruction_memory.v",
-			"settings":
-			{
-				"buffer_size": 996,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "PC.v",
-			"settings":
-			{
-				"buffer_size": 974,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "prueba1.mem",
-			"settings":
-			{
-				"buffer_size": 132,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "MEM_WB.v",
-			"settings":
-			{
-				"buffer_size": 1989,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "instructions.mem",
-			"settings":
-			{
-				"buffer_size": 428,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ALU_control.v",
-			"settings":
-			{
-				"buffer_size": 2491,
 				"line_ending": "Windows"
 			}
 		}
@@ -725,6 +632,24 @@
 	],
 	"file_history":
 	[
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/EX_MEM.v",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/top.v",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/ID_EX.v",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/Instruction_memory.v",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/PC.v",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/ALU_control.v",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/MEM_WB.v",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/prueba1.mem",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/Data_memory.v",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/prueba3.mem",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/ALU.v",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/prueba3.asm",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/prueba2.mem",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/prueba6.asm",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/prueba5.asm",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/prueba4.asm",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/prueba2.asm",
+		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/prueba1.asm",
 		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/.gitignore",
 		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/project-sublime.sublime-project",
 		"/Z/home/agustin/arquitectura/mips_definitivo/mips_definitivo.srcs/sim_1/imports/new/top_con_debug.v",
@@ -834,25 +759,7 @@
 		"/C/Users/carra/Proyectos/tpfinal/Proxy/scripts/cliente.sh",
 		"/C/Users/carra/Proyectos/tpfinal/Proxy/scripts/squid.conf",
 		"/C/Users/carra/Proyectos/tpfinal/Proxy/scripts/proxy.sh",
-		"/C/Users/carra/Desktop/MEGA-CLAVEDERECUPERACION.txt",
-		"/C/Users/carra/Proyectos/Finanzas/nodo2/Vagrantfile",
-		"/C/Users/carra/Proyectos/Finanzas/nodo1/Vagrantfile",
-		"/C/Users/carra/Documents/vagrant/Vagrantfile",
-		"//wsl$/Debian/home/agustin/santiago (1).keyZone.Identifier",
-		"/C/Users/carra/Proyectos/blockchain-poc/blockchain_api5000.py",
-		"/C/Users/carra/Desktop/libre-deuda-madriguera/vence-mayo/Requerimiento.txt",
-		"/C/Users/carra/Documents/vagrant/debian/nodo1/.vagrant/machines/default/virtualbox/action_provision",
-		"/C/Users/carra/Documents/vagrant/debian/nodo1/Vagranfile",
-		"/C/Users/carra/Documents/vagrant/debian/Vagranfile",
-		"/C/Users/carra/Desktop/nginx.conf",
-		"/C/Users/carra/.ssh/key.pub",
-		"/C/Users/carra/.ssh/known_hosts",
-		"/C/Users/carra/Desktop/Web.Config",
-		"/C/Users/carra/Desktop/Web_old.Config",
-		"//wsl$/Ubuntu-20.04/home/agustin/spoof.sh",
-		"/C/Users/carra/.ssh/key",
-		"/C/Users/carra/Documents/MobaXterm/slash/usr/include/netinet/tcp.h",
-		"/C/Users/carra/Desktop/mail.py"
+		"/C/Users/carra/Desktop/MEGA-CLAVEDERECUPERACION.txt"
 	],
 	"find":
 	{
@@ -939,36 +846,35 @@
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "top.v",
+					"file": "instructions.mem",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1799,
+						"buffer_size": 329,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1798,
-								1798
+								296,
+								296
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SystemVerilog/SystemVerilog.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1025,40 +931,11 @@
 						"translation.y": 924.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "EX_MEM.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2910,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2885,
-								2885
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SystemVerilog/SystemVerilog.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1386.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "MIPS.v",
 					"semi_transient": false,
 					"settings":
@@ -1083,46 +960,16 @@
 						"translation.y": 4225.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "ID_EX.v",
+					"buffer": 4,
+					"file": "prueba4.mem",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5164,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5097,
-								5097
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SystemVerilog/SystemVerilog.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3696.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "prueba1.asm",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 296,
+						"buffer_size": 297,
 						"regions":
 						{
 						},
@@ -1130,323 +977,7 @@
 						[
 							[
 								296,
-								181
-							]
-						],
-						"settings":
-						{
-							"auto_name": "//prueba1",
-							"syntax": "Packages/MIPS Syntax/mips.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "prueba2.asm",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 280,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								138,
-								138
-							]
-						],
-						"settings":
-						{
-							"auto_name": "// prueba2.asm",
-							"syntax": "Packages/MIPS Syntax/mips.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "prueba2.mem",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 198,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								197,
 								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "prueba3.asm",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 707,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								707,
-								707
-							]
-						],
-						"settings":
-						{
-							"auto_name": "// prueba3.asm",
-							"syntax": "Packages/MIPS Syntax/mips.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "ALU.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1656,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1187,
-								1187
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SystemVerilog/SystemVerilog.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 583.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "prueba3.mem",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 396,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								395,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "Data_memory.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1940,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1729,
-								1729
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SystemVerilog/SystemVerilog.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1320.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "Instruction_memory.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 996,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								855,
-								855
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SystemVerilog/SystemVerilog.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 726.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "PC.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 974,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								531,
-								531
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SystemVerilog/SystemVerilog.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 132.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "prueba1.mem",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 132,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								131,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "MEM_WB.v",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1989,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1859,
-								1859
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SystemVerilog/SystemVerilog.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 66.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "instructions.mem",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 428,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								362,
-								362
 							]
 						],
 						"settings":
@@ -1461,20 +992,76 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
-					"file": "ALU_control.v",
+					"buffer": 5,
+					"file": "prueba4.asm",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2491,
+						"buffer_size": 586,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MIPS Syntax/mips.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "data_memory.mem",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								134,
+								134
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Data_memory.v",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1939,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1568,
+								1574
 							]
 						],
 						"settings":
@@ -1483,10 +1070,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
+						"translation.y": 330.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1590,7 +1177,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 339.0,
+	"side_bar_width": 242.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
